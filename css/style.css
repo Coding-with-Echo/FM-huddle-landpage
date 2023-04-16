@@ -38,6 +38,8 @@ body {
   body {
     background: url("/images/bg-desktop.svg"), #674bb1;
     background-repeat: no-repeat, no-repeat;
+    margin: 0 8rem;
+    font-size: 1.8rem;
   }
 }
 
@@ -53,7 +55,7 @@ p {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -95,6 +97,7 @@ p {
 @media screen and (min-width: 1024px) {
   .grid {
     grid-template-columns: auto 1fr;
+    margin-top: 11rem;
   }
 }
 
@@ -107,8 +110,6 @@ p {
 @media screen and (min-width: 768px) {
   .page--content {
     text-align: left;
-    padding-right: 9rem;
-    padding-left: 0;
   }
 
   .btn {
@@ -129,7 +130,7 @@ header > img {
 
 @media screen and (min-width: 1024px) {
   header > img {
-    max-width: 320px;
+    max-width: 220px;
   }
 }
 
