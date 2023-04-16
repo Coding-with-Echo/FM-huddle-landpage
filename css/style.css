@@ -1,0 +1,158 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: hsl(257, 40%, 49%);
+  --color-secondary: hsl(0, 0%, 100%);
+  --color-accent: hsl(300, 69%, 71%);
+
+  --font-headings: "Poppins", sans-serif;
+  --font-paragraphs: "Open Sans", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semibold: 600;
+}
+
+/* typography */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: url("/images/bg-mobile.svg"), #674bb1;
+  background-repeat: no-repeat, no-repeat;
+  font-size: 1.5rem;
+  font-family: var(--font-paragraphs);
+  font-weight: var(--fw-regular);
+  color: var(--color-secondary);
+  margin: 0 3.5rem;
+  display: grid;
+  place-items: center;
+  line-height: 1.6;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    background: url("/images/bg-desktop.svg"), #674bb1;
+    background-repeat: no-repeat, no-repeat;
+  }
+}
+
+h1 {
+  font-family: var(--font-headings);
+  font-weight: var(--fw-semibold);
+  font-size: 2.5rem;
+}
+
+p {
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* button */
+.btn {
+  color: var(--color-primary);
+  font-family: var(--font-headings);
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  border-radius: 50px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 15px 0.1px #555;
+  transition: all 0.3s;
+  min-width: 80%;
+  text-align: center;
+}
+
+.btn:hover {
+  color: var(--color-secondary);
+  background: var(--color-accent);
+}
+
+/* grid */
+.grid {
+  display: grid;
+  gap: 3.5rem;
+  margin-top: 6rem;
+  margin-bottom: 1.5rem;
+  place-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .grid {
+    grid-template-columns: a 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid {
+    grid-template-columns: auto 1fr;
+  }
+}
+
+/* page */
+.page--content {
+  text-align: center;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .page--content {
+    text-align: left;
+    padding-right: 9rem;
+    padding-left: 0;
+  }
+
+  .btn {
+    min-width: 50%;
+  }
+}
+
+/* header */
+header {
+  display: flex;
+  justify-self: start;
+  padding-top: 3rem;
+}
+
+header > img {
+  max-width: 120px;
+}
+
+@media screen and (min-width: 1024px) {
+  header > img {
+    max-width: 320px;
+  }
+}
+
+/* footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+footer > a {
+  color: var(--color-secondary);
+  margin: 0 1rem;
+  transition: fill 0.5s;
+}
+
+footer > a:hover {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    justify-self: flex-end;
+  }
+}
